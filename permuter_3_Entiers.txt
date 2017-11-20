@@ -1,0 +1,40 @@
+Algorithme : permuter_3_Entiers
+//BUT: Demande 3 entiers à l'user et permute 	les valeurs entrées
+//ENTREES: 3 entiers
+//SORTIES: 3 entiers dans un ordre différent
+
+VAR nb1, nb2, nb3 : ENTIER
+
+DEBUT
+	ECRIRE "Veuillez insérer 3 entiers"
+	LIRE nb1, nb2, nb3
+	//Permute nb1 et nb2
+	nb1 <- nb1 + nb2
+	nb2 <- nb1 - nb2 //Affecte nb2 par nb1
+	nb1 <- nb1 - nb2 //Affecte nb1 par nb2
+	//Permute nb2 et nb3
+	nb2 <- nb2 + nb3 
+	nb3 <- nb2 - nb3 //Affecte nb3 par nb2
+	nb2 <- nb2 - nb3 //Affecte nb2 par nb3
+	ECRIRE "NB1= ", nb1, "NB2= ", nb2, "NB3= ", nb3 
+FIN
+
+Algorithme : permuter_3_Entiers_V2
+//BUT: Demande 3 entiers à l'user et permute 	les valeurs entrées
+//ENTREES: 3 entiers
+//SORTIES: 3 entiers dans un ordre différent
+
+VAR nb1, nb2, nb3, perm : ENTIER
+
+DEBUT
+	ECRIRE "Veuillez insérer 3 entiers"
+	LIRE nb1, nb2, nb3
+	perm <- nb1
+	nb1 <- nb2
+	nb2 <- perm
+	perm <- nb2
+	nb2 <- nb3
+	nb3 <- perm
+	ECRIRE "NB1= ", nb1, "NB2= ", nb2, "NB3= ", nb3 
+FIN
+
